@@ -19,4 +19,24 @@ return [
             ],
         ],
     ],
+    'container' => [
+        'definitions' => [
+            \hiqdev\thememanager\menus\AbstractSidebarMenu::class => [
+                'add' => [
+                    'ticket' => [
+                        'menu' => [
+                            'merge' => [
+                                'faq' => [
+                                    'menu' => \hipanel\faq\menus\SidebarSubMenu::class,
+                                    'where' => [
+                                        'after' => ['templates'],
+                                    ],
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ],
 ];
