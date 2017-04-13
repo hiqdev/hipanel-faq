@@ -4,6 +4,11 @@ return [
     'aliases' => [
         '@faq' => '/faq/faq',
     ],
+    'modules' => [
+        'faq' => [
+            'class' => \hipanel\faq\Module::class,
+        ],
+    ],
     'components' => [
         'i18n' => [
             'translations' => [
