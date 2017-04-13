@@ -10,6 +10,11 @@ return [
         ],
     ],
     'components' => [
+        'themeManager' => [
+            'pathMap' => [
+                '@hipanel/faq/widgets/views' => '$themedWidgetPaths',
+            ],
+        ],
         'i18n' => [
             'translations' => [
                 'hipanel:faq' => [
