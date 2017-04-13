@@ -50,6 +50,13 @@
             "hisite": "src/config/hisite.php"
         }
     },
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "hipanel\\faq\\": "src"
