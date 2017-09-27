@@ -41,7 +41,7 @@ class Faq extends \yii\base\Widget
             });
 
             //  Select first tab
-            $('.faq-tabs .faq-categories li:eq(0) a').tab('show');
+//            $('.faq-tabs .faq-categories li:eq(0) a').tab('show');
 
             // Init FAQ plugin
             $('#faq').faq();

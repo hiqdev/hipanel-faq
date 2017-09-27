@@ -39,7 +39,10 @@
 
                 return false;
             });
-            $('.faq-categories ul li a:first').click();
+            //  Select first tab if hash is empty
+            if (!hash) {
+                $('.faq-categories ul li:eq(0) a').click();
+            }
         }
     };
 
