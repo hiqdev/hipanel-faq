@@ -4,42 +4,42 @@ $this->title = 'Purchasing of SSL-certificate';
 
 ?>
 
-<p>To purchase an SSL certificate, you should go to the menu of your account and push there  “SSL certificates”/”Buy certificate”.</p>
+<p>To purchase an SSL certificate, you should go to the menu of your account and push there  "SSL certificates"/"Buy certificate".</p>
 <p><img src="<?= $options['imgDir'] ?>/help/certificate/purchase/en/01.jpg"></p>
 <p>Next step is to set up  the filters with which the certificates will be sorted.</P>
 <p><img src="<?= $options['imgDir'] ?>/help/certificate/purchase/en/02.jpg"></p>
 <p>Select the period for which you want to purchase the certificate and, after reading and agreeing to the terms of use, make an order.</p>
 <p><img src="<?= $options['imgDir'] ?>/help/certificate/purchase/en/03.jpg"></p>
-<p>Click on the “Get certificate” button.</p>
+<p>Click on the "Get certificate" button.</p>
 <p><img src="<?= $options['imgDir'] ?>/help/certificate/purchase/en/04.jpg"></p>
 <p>To obtain the certificate, you have  a few additional steps.</p>
 <p>Fill in (or choose the  existing) contact details. Then generate the CSR</p>
 <p><img src="<?= $options['imgDir'] ?>/help/certificate/purchase/en/05.jpg"></p>
-<p>The next step is to fill in the form for the CSR generation  . Click on “Generate CSR” and you will see a new window with CSR data. Copy all information from there  and save it in a safe place.</p>
+<p>The next step is to fill in the form for the CSR generation  . Click on "Generate CSR" and you will see a new window with CSR data. Copy all information from there  and save it in a safe place.</p>
 <p><img src="<?= $options['imgDir'] ?>/help/certificate/purchase/en/06.jpg"></p>
 <p><img src="<?= $options['imgDir'] ?>/help/certificate/purchase/en/07.jpg"></p>
-<p>The last step is to validation of the domain. Choose the domain control validation method that suits You:</p>
+<p>The last step a to validation of the domain. Choose the domain control validation method that suits You:</p>
 <ol>
     <li>
-        <p><b>E-mail</b>. Enter your e-mail, click on “Issue certificate” . Check Your email, within 5-10 minutes You should receive an email with a link to confirm. Go for it. Expect to release of the certificate within, as a rule, 15 minutes.</p>
+        <p><b>E-mail</b>. Choose the contact e-mail from the offered list, click on "Issue certificate". Check Your email, within 5-10 minutes You should receive an email with a link to confirm. Go for it. Expect to release of the certificate within, as a rule, 15 minutes.</p>
         <p><img src="<?= $options['imgDir'] ?>/help/certificate/purchase/en/08.jpg"></p>
     </li>
     <li>
-        <p><b>DNS</b>. Click on the “Issue certificate” button.</p>
+        <p><b>DNS</b>. Click on the "Issue certificate" button.</p>
         <p><img src="<?= $options['imgDir'] ?>/help/certificate/purchase/en/09.jpg"></p>
         <p>Open the certificate`s data and copy CNAME-record from there. This record must be set in your domain DNS-records.</p>
         <p><img src="<?= $options['imgDir'] ?>/help/certificate/purchase/en/10.jpg"></p>
         <p><img src="<?= $options['imgDir'] ?>/help/certificate/purchase/en/11.jpg"></p>
     </li>
     <li>
-        <p><b>HTTP</b>. Click on the “Issue certificate” button</p>
+        <p><b>HTTP</b>. Click on the "Issue certificate" button</p>
         <p><img src="<?= $options['imgDir'] ?>/help/certificate/purchase/en/12.jpg"></p>
         <p>Open the certificate`s data. Copy the file data and locate it on your site.</p>
         <p><img src="<?= $options['imgDir'] ?>/help/certificate/purchase/en/10.jpg"></p>
         <p><img src="<?= $options['imgDir'] ?>/help/certificate/purchase/en/13.jpg"></p>
     </li>
     <li>
-        <p><b>HTTPS</b>. Click on the “Issue certificate” button</p>
+        <p><b>HTTPS</b>. Click on the "Issue certificate" button</p>
         <p><img src="<?= $options['imgDir'] ?>/help/certificate/purchase/en/14.jpg"></p>
         <p>Open the certificate`s data. Copy the file data and locate it on your site.<p>
         <p><img src="<?= $options['imgDir'] ?>/help/certificate/purchase/en/10.jpg"></p>
