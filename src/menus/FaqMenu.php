@@ -2,14 +2,16 @@
 
 namespace hipanel\faq\menus;
 
+use hipanel\faq\widgets\Faq;
 use hipanel\helpers\StringHelper;
+use hiqdev\yii2\menus\Menu;
 use yii\web\View;
 use Yii;
 
-class FaqMenu extends \hiqdev\yii2\menus\Menu
+class FaqMenu extends Menu
 {
     public $widgetConfig = [
-        'class' => \hipanel\faq\widgets\Faq::class,
+        'class' => Faq::class,
     ];
 
     public $path = '@hipanel/faq/faq_source';
@@ -36,23 +38,45 @@ class FaqMenu extends \hiqdev\yii2\menus\Menu
         $items = [];
         foreach ($this->scanDir($path) as $key => $file) {
             if (is_dir($file)) {
-                $items[$key] = $this->crawlDir($file);
+                $item = $this->crawlDir($file);
             } else {
-                $items[$key] = $this->readFile($file);
+                $item = $this->readFile($file);
             }
+
+            if ($item === null) {
+                continue;
+            }
+
+            $items[$key] = $item;
         }
-        $index = "$path/index.php";
-        if (is_file($index)) {
-            $label = $this->readFile($index)['label'];
+
+        $indexFile = "$path/index.php";
+        if (is_file($indexFile)) {
+            $index = $this->readFile($indexFile);
+            if ($index === null) {
+                return null;
+            }
+
+            $label = $index['label'];
         }
 
         return compact('label', 'items');
     }
 
-    private function readFile($path)
+    private function readFile($path): ?array
     {
-        $content = $this->view->renderFile($path, ['options' => $this->additionalOptions()]);
+        $visible = true;
+        $content = $this->view->renderFile($path, [
+            'options' => $this->additionalOptions(),
+            'hide' => function () use (&$visible) {
+                $visible = false;
+            }
+        ]);
         $label = $this->view->title;
+
+        if (!$visible) {
+            return null;
+        }
 
         return compact('content', 'label');
     }
