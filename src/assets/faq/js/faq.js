@@ -16,33 +16,69 @@
         init: function () {
             var _this = this;
             var hash = window.location.hash;
-            hash && $('ul a[href=\"' + hash + '\"]').tab('show');
+            var splitHashes = hash.split('#');
+            for (idx in splitHashes) {
+                var current = splitHashes[idx];
+                if (current) {
+                    $('a[href=\"#' + splitHashes[idx] + '\"]').click();
+                }
+            }
+
+            if (splitHashes.pop()) {
+                _this.scrollTo(`#${splitHashes.pop()}`);
+            }
+
+            $('#faq a').click(function (e) {
+                _this.buildHash(this);
+            });
+
             $('.faq-categories ul li a').click(function (e) {
                 $(this).tab('show');
                 var scrollmem = $('body').scrollTop() || $('html').scrollTop();
-                window.location.hash = this.hash;
                 $('html,body').scrollTop(scrollmem);
             });
+
             $('.panel-body-content a[href^="#"]').click(function (e) {
                 e.preventDefault();
-                var el = [];
+                var elems = [];
                 var id = this.getAttribute('href');
                 $(id).parents('.collapse').each(function (i, elem) {
-                    el.push(elem.getAttribute('id'));
+                    elems.push(elem.getAttribute('id'));
                     $(elem).collapse('show');
                 });
                 $(id).collapse('show');
-                var scrl = $(id).offset().top;
-                $('html, body').animate({
-                    scrollTop: scrl - 100
-                }, 600);
+                _this.scrollTo(id);
+                var elemToHash = document.querySelector(`a[href="#${elems.pop()}"]`);
+                _this.buildHash(elemToHash);
 
                 return false;
             });
+
             //  Select first tab if hash is empty
             if (!hash) {
                 $('.faq-categories ul li:eq(0) a').click();
             }
+        },
+        buildHash: function (elem, hash) {
+            var hash = (hash || '');
+            if (!elem.dataset.parent) {
+                if (elem.getAttribute('id')) {
+                    window.location.hash = '#tab-' + elem.getAttribute('id') + (hash || '');
+                } else {
+                    window.location.hash = elem.hash + hash;
+                }
+            } else {
+                var parent = document.querySelector(`a[href="${elem.dataset.parent}"]`) || document.querySelector(`a[href="#tab-${elem.dataset.parent.replace(/#/g, '')}"]`);
+                if (parent) {
+                    this.buildHash(parent, elem.hash + hash);
+                }
+            }
+        },
+        scrollTo: function (selector) {
+            var scrl = $(selector).offset().top;
+            $('html, body').animate({
+                scrollTop: scrl - 100
+            }, 600);
         }
     };
 
