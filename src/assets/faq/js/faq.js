@@ -20,7 +20,7 @@
             for (idx in splitHashes) {
                 var current = splitHashes[idx];
                 if (current) {
-                    $('a[href=\"#' + splitHashes[idx] + '\"]').click();
+                    $('a[href=\"#' + current + '\"]').click();
                 }
             }
 
