@@ -28,7 +28,7 @@
                 _this.scrollTo(`#${splitHashes.pop()}`);
             }
 
-            $('#faq a').click(function (e) {
+            $('#faq a, .faq-tabs-white a').click(function (e) {
                 _this.buildHash(this);
             });
 
