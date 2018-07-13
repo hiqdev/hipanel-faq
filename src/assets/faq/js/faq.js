@@ -24,7 +24,7 @@
                 }
             }
 
-            if (splitHashes.length > 0) {
+            if (splitHashes.length > 0 && splitHashes.pop()) {
                 _this.scrollTo(`#${splitHashes.pop()}`);
             }
 
