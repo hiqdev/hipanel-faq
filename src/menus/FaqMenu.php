@@ -14,7 +14,7 @@ class FaqMenu extends Menu
         'class' => Faq::class,
     ];
 
-    public $path = '@hipanel/faq/faq_source';
+    public $path = __DIR__ . '/../faq_source';
 
     /**
      * @return \yii\base\View|View
