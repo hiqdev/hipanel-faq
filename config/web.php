@@ -12,14 +12,14 @@ return [
     'components' => [
         'themeManager' => [
             'pathMap' => [
-                '@hipanel/faq/widgets/views' => '$themedWidgetPaths',
+                dirname(__DIR__) . '/src/widgets/views' => '$themedWidgetPaths',
             ],
         ],
         'i18n' => [
             'translations' => [
                 'hipanel:faq' => [
                     'class' => \yii\i18n\PhpMessageSource::class,
-                    'basePath' => '@hipanel/faq/messages',
+                    'basePath' => dirname(__DIR__) . '/src/messages',
                 ],
             ],
         ],

@@ -8,7 +8,7 @@ use yii\web\JqueryAsset;
 
 class FaqAsset extends AssetBundle
 {
-    public $sourcePath = '@hipanel/faq/assets/faq';
+    public $sourcePath = __DIR__ . '/assets/faq';
 
     public $js = [
         YII_ENV_PROD ? 'js/faq.min.js' : 'js/faq.js',
