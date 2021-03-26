@@ -11,22 +11,27 @@
 namespace hipanel\faq\widgets;
 
 use hipanel\faq\FaqAsset;
+use yii\base\Widget;
 
-class Faq extends \yii\base\Widget
+class Faq extends Widget
 {
-    public $items = [];
+    public array $items = [];
 
-    public function run()
+    public bool $withAssets = true;
+
+    public function run(): string
     {
-        FaqAsset::register($this->view);
-        $this->registerClientScript();
+        if ($this->withAssets) {
+            FaqAsset::register($this->view);
+            $this->registerClientScript();
+        }
 
         return $this->render('faq/root', [
             'items' => $this->items,
         ]);
     }
 
-    protected function registerClientScript()
+    protected function registerClientScript(): void
     {
         $this->view->registerJs("
             // Switch signs plus and minus on collapse
@@ -39,9 +44,6 @@ class Faq extends \yii\base\Widget
                 i.toggleClass('fa-minus-square-o fa-plus-square-o');
                 event.stopPropagation();
             });
-
-            //  Select first tab
-//            $('.faq-tabs .faq-categories li:eq(0) a').tab('show');
 
             // Init FAQ plugin
             $('#faq').faq();
