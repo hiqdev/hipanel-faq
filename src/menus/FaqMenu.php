@@ -27,10 +27,10 @@ class FaqMenu extends Menu
     public function items()
     {
         $title = $this->view->title;
-        $data = $this->crawlDir(Yii::getAlias($this->path));
+        $items = $this->crawlDir(Yii::getAlias($this->path));
         $this->view->title = $title;
 
-        return $data['items'];
+        return $items;
     }
 
     private function crawlDir($path)
@@ -50,17 +50,7 @@ class FaqMenu extends Menu
             $items[$key] = $item;
         }
 
-        $indexFile = "$path/index.php";
-        if (is_file($indexFile)) {
-            $index = $this->readFile($indexFile);
-            if ($index === null) {
-                return null;
-            }
-
-            $label = $index['label'];
-        }
-
-        return compact('label', 'items');
+        return $items;
     }
 
     private function readFile($path): ?array
