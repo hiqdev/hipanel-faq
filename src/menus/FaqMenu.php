@@ -36,7 +36,7 @@ class FaqMenu extends Menu
     private function crawlDir($path)
     {
         $items = [];
-        $label = [];
+        $label = '';
         foreach ($this->scanDir($path) as $key => $file) {
             if (is_dir($file)) {
                 $item = $this->crawlDir($file);
@@ -57,11 +57,15 @@ class FaqMenu extends Menu
             if ($index === null) {
                 return null;
             }
-
-            $label = $index['label'];
+            if (isset($index['label'])) {
+                $label = $index['label'];
+            }
         }
 
-        return compact('label', 'items');
+        return [
+            'label' => $label,
+            'items' => $items,
+        ];
     }
 
     private function readFile($path): ?array
