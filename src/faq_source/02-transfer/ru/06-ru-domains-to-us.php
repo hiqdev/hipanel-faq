@@ -1,4 +1,10 @@
 <?php
+
+if (empty($ruAvailableZones['ru'])) {
+    $this->title = '';
+    return ;
+}
+
 $this->title = 'Трансфер RU доменов к ' . $options['host'];
 ?>
 

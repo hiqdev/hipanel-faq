@@ -77,7 +77,12 @@ class FaqMenu extends Menu
                 $visible = false;
             }
         ]);
+
         $label = $this->view->title;
+
+        if (empty($label)) {
+            return null;
+        }
 
         if (!$visible) {
             return null;
