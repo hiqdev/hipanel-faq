@@ -5,29 +5,37 @@ $this->title = 'Верификация учетной записи';
 ?>
 
 <p>
-    В панели управления, откройте раздел "Домены", вкладка "Контакты".
+    Перейдите на страницу профайла пользователя.
 </p>
 <p>
-    <img style="display:inline-block; margin:10px 0" border="0" src="<?= $options['imgDir'] ?>/help/verification/ru/1.jpg">
+    <img style="display:inline-block; margin:10px 0; max-width: 100%;
+    " border="0" src="<?= $options['imgDir'] ?>/help/verification/ru/01.png">
 </p>
 <p>
-    Откройте контакт, который нужно верифицировать.
+    Нажмите на ссылку "Verify via KYC".
 </p>
 <p>
-    <img style="display:inline-block; margin:10px 0" border="0" src="<?= $options['imgDir'] ?>/help/verification/ru/2.jpg">
+    <img style="display:inline-block; margin:10px 0; max-width: 100%;
+    " border="0" src="<?= $options['imgDir'] ?>/help/verification/ru/02.png">
 </p>
 <p>
-    Прикрепите все значимые страницы документа.
+    Продолжите процесс верификации на ПК или на мобильном телефоне, отсканировав QR-код.
 </p>
 <p>
-    <img style="display:inline-block; margin:10px 0" border="0" src="<?= $options['imgDir'] ?>/help/verification/ru/3.jpg">
+    <img style="display:inline-block; margin:10px 0; max-width: 100%;
+    " border="0" src="<?= $options['imgDir'] ?>/help/verification/ru/03.png">
 </p>
 <p>
-    <img style="display:inline-block; margin:10px 0" border="0" src="<?= $options['imgDir'] ?>/help/verification/ru/4.jpg">
+    Пожалуйста, сделайте фото документов и селфи.
 </p>
 <p>
-    Ожидайте завершения проверки. Она завершится в течении 48 часов.
+    <img style="display:inline-block; margin:10px 0; max-width: 100%;
+    " border="0" src="<?= $options['imgDir'] ?>/help/verification/ru/04.png">
 </p>
 <p>
-    <img style="display:inline-block; margin:10px 0" border="0" src="<?= $options['imgDir'] ?>/help/verification/ru/5.jpg">
+    После этого, Вы будете проинформированы о решении, в течении минуты
+</p>
+<p>
+    <img style="display:inline-block; margin:10px 0; max-width: 100%;
+    " border="0" src="<?= $options['imgDir'] ?>/help/verification/ru/05.png">
 </p>

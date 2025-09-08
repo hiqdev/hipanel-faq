@@ -1,5 +1,10 @@
 <?php
 
+if (Yii::getAlias('@kyc', false) !== false) {
+    $this->title = '';
+    return ;
+}
+
 $this->title = 'Верификация номера телефона';
 
 ?>

@@ -5,23 +5,32 @@ $this->title = 'Account verification';
 ?>
 
 <p>
-    In the Control Panel, open the tab "Contact" in the section "Domains". Open the contact you want to verify.
+    Go to a customer's profile page.
 </p>
 <p>
-    <img style="display:inline-block; margin:10px 0" border="0" src="<?= $options['imgDir'] ?>/help/verification/en/1.jpg">
+    <img style="display:inline-block; margin:10px 0; max-width: 100%;" border="0" src="<?= $options['imgDir'] ?>/help/verification/en/01.png">
 </p>
 <p>
-    Attach all the relevant pages of the document in good quality.
+    Click on "Verify via KYC" link.
 </p>
 <p>
-    <img style="display:inline-block; margin:10px 0" border="0" src="<?= $options['imgDir'] ?>/help/verification/en/2.jpg">
+    <img style="display:inline-block; margin:10px 0; max-width: 100%;" border="0" src="<?= $options['imgDir'] ?>/help/verification/en/02.png">
 </p>
 <p>
-    <img style="display:inline-block; margin:10px 0" border="0" src="<?= $options['imgDir'] ?>/help/verification/en/3.jpg">
+    Proceed with the verification process on a PC, or with your mobile phone via a QR code.
 </p>
 <p>
-    Expect verification completion. It will be completed within the next 48 hours.
+    <img style="display:inline-block; margin:10px 0; max-width: 100%;" border="0" src="<?= $options['imgDir'] ?>/help/verification/en/03.png">
 </p>
 <p>
-    <img style="display:inline-block; margin:10px 0" border="0" src="<?= $options['imgDir'] ?>/help/verification/en/4.jpg">
+    Please make photos of youIDs and selfie.
+</p>
+<p>
+    <img style="display:inline-block; margin:10px 0; max-width: 100%;" border="0" src="<?= $options['imgDir'] ?>/help/verification/en/04.png">
+</p>
+<p>
+    After that, you'll be notified about a decision within a minute.
+</p>
+<p>
+    <img style="display:inline-block; margin:10px 0; max-width: 100%;" border="0" src="<?= $options['imgDir'] ?>/help/verification/en/05.png">
 </p>

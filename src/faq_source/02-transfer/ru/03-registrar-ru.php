@@ -2,6 +2,11 @@
 
 use \yii\helpers\Html;
 
+if (empty($ruAvailableZones['su'])) {
+    $this->title = '';
+    return ;
+}
+
 $this->title = 'Трансфер RU доменов к другим регистраторам';
 ?>
 
